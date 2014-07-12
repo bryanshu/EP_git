@@ -1,0 +1,118 @@
+<html ng-app='TODO'>
+
+	<head>
+		<meta charset='utf-8'>
+		<title>TODO--WHITELABELFUNCTIONALITY</title>
+
+		<!-- 3rd Party Libraries -->
+		<script type='text/javascript' src='/js/3rdparty/MIT/angular.js'></script>
+		<script type='text/javascript' src='/js/3rdparty/CC/bootstrap.js'></script>
+		<script type='text/javascript' src='/js/3rdparty/MIT/ui-bootstrap-tpls-0.11.0.js'></script>
+		<!-- TODO document latest ver -->
+
+		<!-- Functionality -->
+		<!-- TODO panels -->
+		<!-- TODO REST -->
+
+		<!-- CSS -->
+		<!-- link rel='stylesheet' type='text/css' src='TODO' -->
+		<!-- TODO topbar, sidebar, panels -->
+
+		<!-- For PREVIS purposes only, will replace with CSS later -->
+		<style> 
+			#TEST
+			{
+				position: absolute;
+				padding-top:  0px;
+				padding-left: 0px;
+				left:         0px;
+				top:          0px;
+				height: 2000px;
+				width:  2000px;
+
+				/* Using previs image to align things */
+				background-image: url('img/test.png');
+				opacity: 0.3;
+
+			}
+
+			#topbar
+			{
+				position: absolute;
+				padding-left: 0px;
+				padding-top:  0px;
+				left:       278px;
+				top:          0px;
+				height:     120px;
+
+				background-color: blue;
+				opacity: 0.5;
+				width:  2000px;
+			}
+
+			#sidebar
+			{
+				position: absolute;
+				padding-left: 0px;
+				padding-top:  0px;
+				left:         0px;
+				top:          0px;
+				width:      260px;
+
+				background-color: orange;
+				opacity: 0.5;
+				height: 2000px;
+
+			}
+
+			#brandingbar
+			{
+				position: absolute;
+				padding-top:  0px;
+				padding-left: 0px;
+				left:       260px;
+				top:          0px;
+				width:       18px;
+ 
+ 				/* TODO make this load from a dynamic resource */
+				background-color: green;
+				opacity: 0.5;
+				height: 2000px;
+			}
+
+			#channel
+			{
+				position: absolute;
+				padding-top:  0px;
+				padding-left: 0px;
+				left:       278px;
+				top:        120px;
+				
+				background-color: red;
+				opacity: 0.5;
+				width:   2000px;
+				height: 2000px;
+			}
+
+		</style>
+	</head>
+
+	<body ng-controller='prism'>
+
+		<div id='TEST'></div>
+
+		<div id='topbar'  ng-include src='/templates/topbar.html'></div>
+		<div id='sidebar' ng-include src='/templates/sidebar.html'></div>
+		<div id='brandingbar'></div>
+
+		<div id='channel'   ng-controller='channel_controller'>
+
+			<!-- TODO-read these dynamically -->
+			<tabset id='tabs'>
+				<tab heading='TEST'></tab>
+				<!-- TODO each channel should have sorting or subcategories -->
+			</tabset>
+		</div>
+
+	</body>
+</html>
